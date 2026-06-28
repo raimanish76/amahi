@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Amahi Fashion &amp; Designs</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0C0508;--bg2:#160A0D;--card:#1F0E13;--cr:#9B1C2A;--cr2:#C42840;--gd:#C8A24A;--iv:#F5EDE8;--mt:#8F7880;--bd:#28101A}
+body{background:var(--bg);color:var(--iv);font-family:Inter,sans-serif;font-size:15px;min-height:100vh}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:400}
+*{box-sizing:border-box}
+img{display:block;width:100%;height:100%;object-fit:cover}
+button{cursor:pointer;border:none;background:none;font-family:inherit;color:inherit}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-thumb{background:var(--cr)}
+.ann{background:var(--cr);color:#fff;text-align:center;padding:9px;font-size:11px;letter-spacing:2px;font-weight:500}
+header{position:sticky;top:0;z-index:200;background:rgba(12,5,8,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--bd)}
+.hdr{max-width:1440px;margin:0 auto;padding:0 40px;height:74px;display:flex;align-items:center;gap:20px}
+.logo-box{background:#fff;padding:6px 14px;border-radius:3px;cursor:pointer;flex-shrink:0;display:flex;align-items:center}
+.logo-box svg{height:40px;width:auto;display:block}
+nav{display:flex;gap:18px;flex:1;justify-content:center}
+nav a{font-size:10px;letter-spacing:2px;color:var(--mt);cursor:pointer;padding:3px 0;border-bottom:1px solid transparent;transition:all .2s;white-space:nowrap}
+nav a:hover,nav a.on{color:var(--iv);border-color:var(--cr)}
+.hdr-r{display:flex;align-items:center;gap:12px}
+.icn{font-size:10px;letter-spacing:1.5px;color:var(--mt);cursor:pointer;position:relative;padding:4px;transition:color .2s;white-space:nowrap}
+.icn:hover{color:var(--cr2)}
+.dot{position:absolute;top:-3px;right:-7px;background:var(--cr);color:#fff;border-radius:50%;width:15px;height:15px;font-size:9px;display:flex;align-items:center;justify-content:center;font-weight:700}
+.srch{position:relative}
+.srch input{background:var(--bg2);border:1px solid var(--bd);color:var(--iv);padding:7px 11px 7px 30px;border-radius:18px;font-size:12px;width:155px;outline:none;transition:border-color .2s;font-family:Inter,sans-serif}
+.srch input:focus{border-color:var(--cr)}
+.si{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--mt);font-size:12px;pointer-events:none}
+.zari{display:flex;align-items:center;padding:0 40px;max-width:1440px;margin:52px auto}
+.zl{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--cr),transparent);opacity:.4}
+.zm{color:var(--cr2);padding:0 12px;font-size:13px}
+.sec{max-width:1440px;margin:0 auto;padding:0 40px}
+.sh{text-align:center;margin-bottom:40px}
+.sh h2{font-size:40px;letter-spacing:2px;margin-bottom:7px}
+.sh p{color:var(--mt);font-size:10px;letter-spacing:3px}
+.eye{font-size:9px;letter-spacing:3px;color:var(--cr2);display:block;margin-bottom:9px}
+.hero{position:relative;height:88vh;min-height:560px;overflow:hidden;display:flex;align-items:center}
+.hbg{position:absolute;inset:0;object-fit:cover;filter:brightness(.44) saturate(.8)}
+.hov{position:absolute;inset:0;background:linear-gradient(120deg,rgba(12,5,8,.92),rgba(12,5,8,.18))}
+.hc{position:relative;z-index:2;padding:0 72px;max-width:620px}
+.hc h1{font-size:60px;letter-spacing:2px;line-height:1.06;margin-bottom:16px}
+.hc p{font-size:14px;color:rgba(245,237,232,.6);margin-bottom:28px;max-width:370px;line-height:1.85}
+.hbs{display:flex;gap:10px;flex-wrap:wrap}
+.hstag{position:absolute;bottom:0;left:0;right:0;z-index:3;background:rgba(155,28,42,.84);padding:12px 40px;display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+.ht{font-size:9px;letter-spacing:2px;color:rgba(255,255,255,.85)}
+.bp{background:var(--cr);color:#fff;padding:13px 30px;font-size:10px;letter-spacing:3px;cursor:pointer;border:none;transition:background .2s}
+.bp:hover{background:var(--cr2)}
+.bo{background:transparent;color:var(--iv);padding:12px 30px;font-size:10px;letter-spacing:3px;border:1px solid rgba(245,237,232,.3);cursor:pointer;transition:all .2s}
+.bo:hover{border-color:var(--cr);color:var(--cr2)}
+.cg{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}
+.cc{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:3/4}
+.cc.tall{grid-row:span 2;aspect-ratio:auto}
+.cc img{transition:transform .55s}
+.cc:hover img{transform:scale(1.07)}
+.cov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,5,8,.82),rgba(12,5,8,.08) 60%)}
+.cl{position:absolute;bottom:20px;left:20px}
+.cl em{display:block;font-size:9px;letter-spacing:3px;color:var(--cr2);margin-bottom:2px;font-style:normal}
+.cl h3{font-size:22px;letter-spacing:2px;color:var(--iv)}
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.pc{background:var(--card);overflow:hidden;cursor:pointer;transition:transform .25s;border:1px solid #1E0A10}
+.pc:hover{transform:translateY(-4px)}
+.pci{position:relative;aspect-ratio:3/4;overflow:hidden;background:#1A0B10}
+.pci img{transition:transform .5s}
+.pc:hover .pci img{transform:scale(1.07)}
+.pb{position:absolute;top:10px;left:10px;display:flex;flex-direction:column;gap:4px;z-index:2}
+.bsal{background:var(--cr);color:#fff;font-size:9px;letter-spacing:1.5px;padding:3px 8px}
+.bnw{background:var(--gd);color:#0C0508;font-size:9px;letter-spacing:1.5px;padding:3px 8px;font-weight:600}
+.pw{position:absolute;top:10px;right:10px;z-index:2;width:30px;height:30px;background:rgba(12,5,8,.6);display:flex;align-items:center;justify-content:center;border-radius:50%;color:var(--mt);font-size:14px;transition:color .2s;border:none;cursor:pointer}
+.pw:hover,.pw.on{color:var(--cr2)}
+.pi{padding:13px}
+.pcat{font-size:9px;letter-spacing:2px;color:var(--cr2);margin-bottom:3px}
+.pnm{font-family:'Cormorant Garamond',serif;font-size:16px;margin-bottom:5px;line-height:1.3}
+.pp{display:flex;align-items:baseline;gap:7px;margin-bottom:4px}
+.nw{font-size:14px;font-weight:500;color:var(--gd)}
+.ws{font-size:11px;color:var(--mt);text-decoration:line-through}
+.strs{color:var(--cr2);font-size:10px;margin-bottom:4px}
+.padd{width:100%;padding:10px;background:transparent;border:1px solid var(--bd);color:var(--mt);font-size:9px;letter-spacing:2.5px;margin-top:10px;transition:all .2s;cursor:pointer;font-family:Inter,sans-serif}
+.padd:hover{background:var(--cr);color:#fff;border-color:var(--cr)}
+.shoplay{display:grid;grid-template-columns:200px 1fr;gap:30px;align-items:start}
+.flt{position:sticky;top:88px}
+.fg{border-bottom:1px solid var(--bd);padding-bottom:14px;margin-bottom:14px}
+.fh{font-size:9px;letter-spacing:2.5px;color:var(--mt);margin-bottom:11px;font-family:Inter,sans-serif}
+.fo{font-size:13px;color:var(--mt);padding:4px 0;cursor:pointer;transition:color .2s;display:flex;justify-content:space-between;border:none;background:none;width:100%;text-align:left;font-family:Inter,sans-serif}
+.fo:hover,.fo.on{color:var(--iv)}
+.sbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.sbar p{font-size:12px;color:var(--mt)}
+.sbar select{background:var(--bg2);border:1px solid var(--bd);color:var(--iv);padding:6px 10px;font-size:12px;outline:none;cursor:pointer;font-family:Inter,sans-serif}
+.dlay{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.dimg{aspect-ratio:3/4;overflow:hidden;background:var(--card)}
+.di h1{font-size:30px;margin-bottom:8px;line-height:1.25}
+.dpr{display:flex;align-items:baseline;gap:10px;margin-bottom:14px}
+.dpr .nw{font-size:21px}
+.dbg{background:var(--cr);color:#fff;font-size:9px;padding:3px 9px;letter-spacing:1px}
+.dvd{border:none;border-top:1px solid var(--bd);margin:16px 0}
+.szs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.sb{padding:7px 13px;border:1px solid var(--bd);font-size:12px;color:var(--mt);cursor:pointer;transition:all .2s;background:transparent;font-family:Inter,sans-serif}
+.sb:hover,.sb.on{border-color:var(--cr);color:var(--iv)}
+.qwrap{display:flex;align-items:center;border:1px solid var(--bd);width:fit-content;margin-bottom:13px}
+.qb{padding:8px 13px;font-size:15px;color:var(--mt);cursor:pointer;transition:color .2s;border:none;background:none}
+.qb:hover{color:var(--cr2)}
+.qn{padding:8px 17px;border-left:1px solid var(--bd);border-right:1px solid var(--bd);font-size:14px;min-width:46px;text-align:center}
+.acb{width:100%;padding:14px;background:var(--cr);color:#fff;font-size:10px;letter-spacing:3px;cursor:pointer;border:none;margin-bottom:7px;transition:background .2s;font-family:Inter,sans-serif;font-weight:500}
+.acb:hover{background:var(--cr2)}
+.wb{width:100%;padding:13px;background:transparent;border:1px solid var(--bd);color:var(--mt);font-size:10px;letter-spacing:3px;cursor:pointer;transition:all .2s;font-family:Inter,sans-serif}
+.wb:hover{border-color:var(--cr);color:var(--cr2)}
+.cp{max-width:1020px;margin:0 auto;padding:50px 40px}
+.ci-wrap{border-top:1px solid var(--bd)}
+.ci{display:grid;grid-template-columns:90px 1fr auto;gap:16px;align-items:start;padding:20px 0;border-bottom:1px solid var(--bd)}
+.ctb{background:var(--card);padding:24px;margin-top:24px;border:1px solid var(--bd)}
+.ctr{display:flex;justify-content:space-between;margin-bottom:9px;font-size:13px;color:var(--mt)}
+.ctr.big{font-size:16px;color:var(--iv);font-weight:500;margin-top:12px;padding-top:12px;border-top:1px solid var(--bd)}
+.chklay{display:grid;grid-template-columns:1fr 350px;gap:40px;max-width:1060px;margin:0 auto;padding:50px 40px}
+.ff{margin-bottom:14px}
+.ff label{display:block;font-size:9px;letter-spacing:1.5px;color:var(--mt);margin-bottom:6px}
+.ff input,.ff select{width:100%;padding:10px 12px;background:var(--bg2);border:1px solid var(--bd);color:var(--iv);font-size:13px;outline:none;transition:border-color .2s;font-family:Inter,sans-serif}
+.ff input:focus,.ff select:focus{border-color:var(--cr)}
+.fr2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.osb{background:var(--card);padding:24px;border:1px solid var(--bd);position:sticky;top:88px}
+.pt{text-align:center;padding:50px 40px 38px;background:var(--bg2);border-bottom:1px solid var(--bd);margin-bottom:38px}
+.pt h1{font-size:44px;letter-spacing:3px;margin-bottom:6px}
+.pt p{font-size:10px;color:var(--mt);letter-spacing:2px}
+.toast{position:fixed;bottom:22px;right:22px;background:var(--cr);color:#fff;padding:11px 20px;font-size:12px;letter-spacing:1px;z-index:9999;opacity:0;transform:translateY(14px);transition:all .3s;pointer-events:none;font-weight:500;border-left:3px solid var(--gd)}
+.toast.show{opacity:1;transform:translateY(0)}
+footer{background:var(--bg2);border-top:1px solid var(--bd);margin-top:70px}
+.fi{max-width:1440px;margin:0 auto;padding:50px 40px 30px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.flb{background:#fff;padding:6px 14px;border-radius:3px;display:inline-flex;margin-bottom:12px}
+.flb svg{height:36px;width:auto}
+.fc h4{font-size:9px;letter-spacing:3px;color:var(--cr2);margin-bottom:13px}
+.fc a{display:block;font-size:13px;color:var(--mt);margin-bottom:8px;cursor:pointer;transition:color .2s;text-decoration:none}
+.fc a:hover{color:var(--iv)}
+.fbot{border-top:1px solid var(--bd);padding:16px 40px;max-width:1440px;margin:0 auto;display:flex;justify-content:space-between;font-size:11px;color:var(--mt)}
+.cban{position:relative;height:230px;overflow:hidden}
+.cban img{filter:brightness(.38) saturate(.8)}
+.cbt{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.cbt h1{font-size:42px;letter-spacing:3px}
+.ab{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.ab-im{aspect-ratio:4/5;overflow:hidden}
+.es{text-align:center;padding:64px 20px}
+.es h2{font-size:26px;color:var(--mt);font-family:'Cormorant Garamond',serif;margin-bottom:10px}
+.bkb{display:flex;align-items:center;gap:7px;font-size:10px;letter-spacing:2px;color:var(--mt);cursor:pointer;padding:14px 40px;background:var(--bg2);border-bottom:1px solid var(--bd);width:100%;transition:color .2s;border:none;font-family:Inter,sans-serif;text-align:left}
+.bkb:hover{color:var(--cr2)}
+.wishlay{max-width:1440px;margin:0 auto;padding:50px 40px}
+@media(max-width:900px){
+.hdr{padding:0 16px} nav{display:none}
+.hc{padding:0 20px}.hc h1{font-size:34px}
+.hstag{gap:14px;padding:10px}
+.cg{grid-template-columns:1fr 1fr}.cc.tall{grid-row:auto}
+.dlay,.shoplay,.chklay,.ab{grid-template-columns:1fr}
+.sec,.zari{padding-left:16px;padding-right:16px}
+.pg{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+.fi{grid-template-columns:1fr 1fr}
+.cp{padding:36px 16px}.chklay{padding:36px 16px}.pt{padding:36px 16px 28px}
+.wishlay{padding:36px 16px}
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div class="toast" id="T"></div>
+
+<script>
+var CDN = "https://amahifashion.com/cdn/shop/files/";
+var LOGOSVG = '<svg viewBox="0 0 200 56" xmlns="http://www.w3.org/2000/svg"><text x="8" y="46" font-family="Georgia,serif" font-size="46" font-style="italic" font-weight="700" fill="#8B0000" letter-spacing="-1">Amahi</text></svg>';
+
+var CATS = [
+  {id:"all",l:"All"},
+  {id:"saree",l:"Sarees"},
+  {id:"suits",l:"Suits"},
+  {id:"cord-set",l:"Cord Sets"},
+  {id:"lehenga",l:"Lehenga"},
+  {id:"kaftan",l:"Kaftan"},
+  {id:"anarkali",l:"Anarkali"},
+  {id:"sharara",l:"Sharara"}
+];
+
+var BIMG = {
+  "saree": CDN+"Untitled_364_x_426_px_42.jpg?v=1765975675",
+  "suits": CDN+"1000098085_a3a38330-5fac-4fbe-a6d4-246eee7b4476.jpg?v=1781285782",
+  "cord-set": CDN+"Petrol_Blue_Chanderi_Silk_Co-ord_Set.jpg?v=1781797292",
+  "lehenga": CDN+"TissueSaree_1.png?v=1765975675",
+  "kaftan": CDN+"1000097475.jpg?v=1776418375",
+  "anarkali": CDN+"Lemon_Yellow_Mul_Chanderi_Anarkali_Suit_Set.jpg?v=1781795668",
+  "sharara": CDN+"AKS03669.jpg?v=1765525220"
+};
+
+var PRODUCTS = [
+  {id:1,cat:"saree",name:"Pure Organza Royal Blue Hand Embroidered Saree",price:9489,og:0,badge:"new",img:CDN+"Untitled_364_x_426_px_2.jpg?v=1765361573",fab:"Pure Organza",rating:4.8,desc:"Pure organza hand-embroidered saree with raw silk blouse. 100% handcrafted zari work. Length 5.5m."},
+  {id:2,cat:"saree",name:"Pure Organza Powder Blue Saree - Dabka Handwork",price:12300,og:0,badge:"",img:CDN+"AKS02429.jpg?v=1765348282",fab:"Pure Organza",rating:4.8,desc:"Exquisite powder blue pure organza with traditional Dabka hand embroidery. Raw silk blouse included."},
+  {id:3,cat:"saree",name:"Pure Tissue Ivory Saree with Velvet Blouse",price:13300,og:0,badge:"",img:CDN+"TissueSaree_1.png?v=1765975675",fab:"Tissue Silk",rating:4.8,desc:"Timeless ivory tissue saree with intricate hand embroidery, paired with rich velvet blouse."},
+  {id:4,cat:"saree",name:"Pure Organza with Pearl and Baka Handwork",price:16949,og:0,badge:"new",img:CDN+"Untitled_364_x_426_px_42.jpg?v=1765975675",fab:"Pure Organza",rating:4.8,desc:"Deep emerald green organza with hand-embroidered zari border. Fine pearl and baka detailing along the pallu."},
+  {id:5,cat:"saree",name:"Handcrafted Satin Organza Saree - Dabka and Sequin",price:11700,og:15800,badge:"sale",img:CDN+"TissueSaree_2.png?v=1765975675",fab:"Satin Organza",rating:4.8,desc:"Pure satin organza with Dabka and sequin embroidery. Mesmerising shimmer with every movement."},
+  {id:6,cat:"saree",name:"Pure Tussar Silk Saree - Handcrafted Dabka",price:24800,og:0,badge:"",img:CDN+"AKS02360.jpg?v=1765348282",fab:"Tussar Silk",rating:4.8,desc:"Our most coveted saree in pure Tussar silk. Natural texture combined with Dabka embroidery creates a masterpiece."},
+  {id:7,cat:"saree",name:"Pure China Silk Saree - Dabka and Sequin",price:10300,og:0,badge:"",img:CDN+"TissueSaree_3.png?v=1765975675",fab:"China Silk",rating:4.8,desc:"Pure China silk drape with meticulous Dabka and sequin embroidery."},
+  {id:8,cat:"saree",name:"Pure Organza Saree with Stone Embroidery",price:8500,og:0,badge:"new",img:CDN+"AKS02424.jpg?v=1765348282",fab:"Pure Organza",rating:4.8,desc:"Each stone individually placed by master craftsmen, creating a constellation-like pattern on pure organza."},
+  {id:9,cat:"saree",name:"Pure Organza Satin - Complete Dabka and Pearl",price:22800,og:0,badge:"",img:CDN+"TissueSaree_5.png?v=1765975675",fab:"Satin Organza",rating:4.8,desc:"Complete Dabka handwork with pearl accents on pure organza satin. A regal masterpiece."},
+  {id:10,cat:"saree",name:"Pure China Silk - Triple-Shade with Kardana",price:11500,og:0,badge:"new",img:CDN+"AKS02393.jpg?v=1765348282",fab:"China Silk",rating:4.8,desc:"Rare triple-shade China silk with Kardana and Dabka embroidery. Gradient shading creates unique depth."},
+  {id:11,cat:"saree",name:"Pure Organza Saree - Classic Zardozi",price:7500,og:0,badge:"",img:CDN+"AKS02431.jpg?v=1765348282",fab:"Pure Organza",rating:4.8,desc:"Classic Zardozi embroidery on pure organza. Golden zari threads create a royal tapestry effect."},
+  {id:12,cat:"saree",name:"Pure Organza Saree - Exquisite Zardozi",price:7500,og:0,badge:"",img:CDN+"AKS02331.jpg?v=1765348282",fab:"Pure Organza",rating:4.8,desc:"Exquisite Zardozi on pure organza. Each motif individually hand-stitched in real gold and silver threads."},
+  {id:13,cat:"saree",name:"Pure Tussar Silk - Copper Dabka Embroidery",price:23400,og:0,badge:"",img:CDN+"TissueSaree_7.png?v=1765975675",fab:"Tussar Silk",rating:4.8,desc:"Pure Tussar silk with handcrafted copper Dabka embroidery. Warm tones against natural Tussar."},
+  {id:14,cat:"saree",name:"Organza Noor Hand-Embroidered Saree Set",price:8500,og:0,badge:"",img:CDN+"AKS02360.jpg?v=1765348282",fab:"Pure Organza",rating:4.8,desc:"The Noor collection - light and luminosity embodied in pure organza hand embroidery."},
+  {id:20,cat:"suits",name:"Suit Mul Chanderi Hand Embroidery",price:6750,og:0,badge:"new",img:CDN+"1000098085_a3a38330-5fac-4fbe-a6d4-246eee7b4476.jpg?v=1781285782",fab:"Mul Chanderi",rating:4.8,desc:"Elegant Mul Chanderi suit with delicate hand embroidery. Lightweight for all-day comfort."},
+  {id:21,cat:"suits",name:"Chiniya Silk Organza Dupatta - Hand Embroidery",price:7800,og:0,badge:"",img:CDN+"1000098098.jpg?v=1777293296",fab:"Chiniya Silk",rating:4.8,desc:"Pure Chiniya silk suit with exquisite organza dupatta adorned with hand embroidery."},
+  {id:22,cat:"suits",name:"Pure Silk Chanderi - Marori Hand Embroidery",price:7450,og:0,badge:"",img:CDN+"1000098103.jpg?v=1777286973",fab:"Silk Chanderi",rating:4.8,desc:"Pure silk Chanderi featuring exquisite Marori embroidery. Traditional techniques from Jaipur."},
+  {id:23,cat:"suits",name:"Mul Chanderi Anchor Thread Embroidery",price:7540,og:0,badge:"",img:CDN+"AKS02951-Copy.jpg?v=1777286189",fab:"Mul Chanderi",rating:4.8,desc:"Mul Chanderi with beautiful anchor thread embroidery. Tactile elegance."},
+  {id:24,cat:"suits",name:"Pure Mul Chanderi Thread Hand Embroidery",price:6890,og:0,badge:"new",img:CDN+"Pure_mul_chanderi_Thread_hand_embroidery.jpg?v=1781459200",fab:"Mul Chanderi",rating:4.8,desc:"Pure Mul Chanderi with intricate thread hand embroidery. A perennial favourite."},
+  {id:25,cat:"suits",name:"Steel Grey Mul Chanderi Suit Set",price:6350,og:0,badge:"",img:CDN+"Steel_Grey_Mul_Chanderi_Suit_Set.jpg?v=1781459605",fab:"Mul Chanderi",rating:4.8,desc:"Sophisticated steel grey Mul Chanderi. Endlessly versatile."},
+  {id:26,cat:"suits",name:"Turquoise Blue Mul Chanderi Suit Set",price:7850,og:0,badge:"",img:CDN+"Turquoise_Blue_Mul_Chanderi_Suit_Set..jpg?v=1781796444",fab:"Mul Chanderi",rating:4.8,desc:"Vivid turquoise blue Mul Chanderi with complete sleeve hand embroidery."},
+  {id:27,cat:"suits",name:"Sea Green Mul Chanderi Suit Set",price:6500,og:0,badge:"",img:CDN+"Sea-Green_Mul_Chanderi_Suit_Set..jpg?v=1781796639",fab:"Mul Chanderi",rating:4.8,desc:"Fresh sea green Mul Chanderi with hand embroidery sequence."},
+  {id:28,cat:"suits",name:"Teal Blue Chanderi Silk Suit Set",price:6540,og:0,badge:"",img:CDN+"Teal_Blue_Chanderi_Silk_Suit_Set.jpg?v=1781796887",fab:"Chanderi Silk",rating:4.8,desc:"Rich teal blue Chanderi silk with statement sleeve embroidery."},
+  {id:29,cat:"suits",name:"Lemon Yellow Mul Chanderi Anarkali Suit",price:7850,og:0,badge:"",img:CDN+"Lemon_Yellow_Mul_Chanderi_Anarkali_Suit_Set.jpg?v=1781795668",fab:"Mul Chanderi",rating:4.8,desc:"Sunshine lemon yellow Mul Chanderi Anarkali with thread hand embroidery."},
+  {id:30,cat:"suits",name:"Sun Yellow Mul Chanderi Anarkali Suit",price:7540,og:0,badge:"",img:CDN+"Sun-Yellow_Mul_Chanderi_Anarkali_Suit_Set.jpg?v=1781796127",fab:"Mul Chanderi",rating:4.8,desc:"Warm sun yellow Mul Chanderi with organza dupatta."},
+  {id:31,cat:"suits",name:"Mocha Brown Mul Chanderi Suit Set",price:6750,og:0,badge:"new",img:CDN+"Mocha_Brown_Mul_Chanderi_Suit_Set.jpg?v=1781797133",fab:"Mul Chanderi",rating:4.8,desc:"Warm mocha brown Mul Chanderi with organza dupatta hand embroidery."},
+  {id:32,cat:"suits",name:"Dusty Lavender Chanderi Silk Suit Set",price:7950,og:0,badge:"",img:CDN+"Dusty_Lavender_nbsp_Chanderi_Silk_Set..jpg?v=1781797653",fab:"Chanderi Silk",rating:4.8,desc:"Dreamy dusty lavender Chanderi silk with thread embroidery."},
+  {id:33,cat:"suits",name:"Kali-Cut Short Kurti with Najmin Salwar",price:7850,og:0,badge:"",img:CDN+"Kali-cut_short_kurti.jpg?v=1781797862",fab:"Mul Chanderi",rating:4.8,desc:"Contemporary kali-cut short kurti with Najmin salwar."},
+  {id:34,cat:"suits",name:"Upada Silk Kurti Set with Dabka Work",price:6890,og:0,badge:"",img:CDN+"Upada_Silk_Kurti_Set.jpg?v=1781798175",fab:"Upada Silk",rating:4.8,desc:"Upada silk kurti set with Dabka hand embroidery highlights."},
+  {id:35,cat:"suits",name:"Nyasa Silk Kurti - Pearl and Dabka",price:8900,og:0,badge:"new",img:CDN+"AKS02024.jpg?v=1776418375",fab:"Nyasa Silk",rating:4.8,desc:"Flowing Nyasa silk long kurti with pearl and Dabka hand embroidery."},
+  {id:36,cat:"suits",name:"Blush Nude Silk Chanderi Suit Set",price:7500,og:0,badge:"",img:CDN+"AKS03799.jpg?v=1765532885",fab:"Silk Chanderi",rating:4.8,desc:"Blush nude silk chanderi with complete hand embroidery."},
+  {id:40,cat:"cord-set",name:"Petrol Blue Chanderi Silk Co-ord Set",price:7750,og:0,badge:"new",img:CDN+"Petrol_Blue_Chanderi_Silk_Co-ord_Set.jpg?v=1781797292",fab:"Chanderi Silk",rating:4.9,desc:"Petrol blue Chanderi silk co-ord set with patch hand embroidery on sleeves."},
+  {id:41,cat:"cord-set",name:"Mul Chanderi Palzo Cord Set",price:6500,og:0,badge:"",img:CDN+"AKS02225.jpg?v=1776611702",fab:"Mul Chanderi",rating:4.9,desc:"Pure Mul Chanderi palazzo co-ord set with sequence handwork."},
+  {id:42,cat:"cord-set",name:"Lielien Satin Sequence Cord Set",price:6750,og:0,badge:"",img:CDN+"AKS02210.jpg?v=1776534061",fab:"Linen Satin",rating:4.9,desc:"Linen satin cord set with intricate sequence hand embroidery."},
+  {id:43,cat:"cord-set",name:"Pure Silk Chanderi Cord Set - Resham Dabka",price:4999,og:0,badge:"sale",img:CDN+"AKS02146_1.jpg?v=1776532363",fab:"Silk Chanderi",rating:4.9,desc:"Double-shade pure silk Chanderi cord set with resham and Dabka handwork."},
+  {id:44,cat:"cord-set",name:"Upada Silk Cord Set - Kardhana Embroidery",price:7500,og:0,badge:"",img:CDN+"AKS02133.jpg?v=1776424246",fab:"Upada Silk",rating:4.9,desc:"Upada silk cord set with resham Dabka hand embroidery."},
+  {id:45,cat:"cord-set",name:"Pure Chiniya Silk Cord Set - Thread and Pearl",price:8500,og:0,badge:"new",img:CDN+"AKS02084.jpg?v=1776423074",fab:"Chiniya Silk",rating:4.9,desc:"Pure Chiniya silk top and bottom with thread and pearl work."},
+  {id:50,cat:"lehenga",name:"Pure Tissue Silk Lehenga - Kachi Gottapati Work",price:23750,og:0,badge:"",img:CDN+"TissueSaree_1.png?v=1765975675",fab:"Tissue Silk",rating:4.8,desc:"Heirloom-quality tissue silk lehenga with organza dupatta in Kachi Gottapati work."},
+  {id:51,cat:"lehenga",name:"Pure Mul Chanderi Lehenga - Choli Pattern",price:15800,og:0,badge:"new",img:CDN+"TissueSaree_3.png?v=1765975675",fab:"Mul Chanderi",rating:4.8,desc:"Pure Mul Chanderi lehenga with intricate hand embroidery and choli-pattern dupatta."},
+  {id:55,cat:"kaftan",name:"Linen Satin Kaftan - Pure Pearl Embroidery",price:6790,og:0,badge:"",img:CDN+"1000097475.jpg?v=1776418375",fab:"Linen Satin",rating:4.7,desc:"Linen satin kaftan adorned with pure pearl hand embroidery throughout."},
+  {id:56,cat:"kaftan",name:"Pure Chanderi Silk Kaftan - Anchor Embroidery",price:6340,og:8690,badge:"sale",img:CDN+"AKS02049.jpg?v=1776420381",fab:"Chanderi Silk",rating:4.7,desc:"Pure Chanderi silk kaftan with anchor hand embroidery and Dabka work. On sale."},
+  {id:57,cat:"kaftan",name:"Olive Green Linen Satin Kaftan - Marori Work",price:6590,og:0,badge:"",img:CDN+"AKS02210.jpg?v=1776534061",fab:"Linen Satin",rating:4.7,desc:"Olive-toned linen satin kaftan with beautiful Marori hand embroidery."},
+  {id:58,cat:"kaftan",name:"Chiniya Silk Kaftan - Complete Hand Embroidery",price:9450,og:0,badge:"new",img:CDN+"AKS02133.jpg?v=1776424246",fab:"Chiniya Silk",rating:4.7,desc:"Opulent kaftan in pure Chiniya silk with intricate hand embroidery."},
+  {id:60,cat:"anarkali",name:"Mul Chanderi Anarkali - Organza Dupatta and Pithon",price:9400,og:0,badge:"new",img:CDN+"AKS02084.jpg?v=1776423074",fab:"Mul Chanderi",rating:4.9,desc:"Coral-hued Mul Chanderi anarkali with organza dupatta featuring raised Pithon work."},
+  {id:61,cat:"anarkali",name:"Mul Chanderi Anarkali - Mirror Hand Embroidery",price:10300,og:0,badge:"",img:CDN+"AKS02049.jpg?v=1776420381",fab:"Mul Chanderi",rating:4.9,desc:"Striking anarkali with Mul Chanderi fabric and mirror hand embroidery organza dupatta."},
+  {id:62,cat:"anarkali",name:"Rose Blush Silk Chanderi Anarkali Set",price:10500,og:0,badge:"",img:CDN+"AKS02024.jpg?v=1776418375",fab:"Silk Chanderi",rating:4.9,desc:"Romantic rose blush silk Chanderi anarkali with soft organza dupatta."},
+  {id:63,cat:"anarkali",name:"Sunny Yellow Mul Chanderi Anarkali",price:9740,og:0,badge:"",img:CDN+"AKS02247_172ebab1-a018-4b3a-85dd-b61642f9b6dc.jpg?v=1776611702",fab:"Mul Chanderi",rating:4.9,desc:"Sunny yellow pure Mul Chanderi anarkali with complete hand embroidery."},
+  {id:64,cat:"anarkali",name:"Pure Mul Chanderi Anarkali - Complete Embroidery",price:13700,og:0,badge:"",img:CDN+"AKS02146_1.jpg?v=1776532363",fab:"Mul Chanderi",rating:4.9,desc:"Premium mul chanderi anarkali with complete body hand embroidery."},
+  {id:65,cat:"anarkali",name:"Festive Mul Chanderi Anarkali - Special Price",price:11850,og:14890,badge:"sale",img:CDN+"AKS02133.jpg?v=1776424246",fab:"Mul Chanderi",rating:4.9,desc:"Festive-season favourite at a special price. Complete hand embroidery on pure Mul Chanderi."},
+  {id:70,cat:"sharara",name:"Chanderi Silk Sharara - Pithon and Gotta Work",price:12500,og:0,badge:"new",img:CDN+"AKS03669.jpg?v=1765525220",fab:"Chanderi Silk",rating:4.9,desc:"Chanderi silk sharara with organza dupatta featuring Pithon and Gotta work."},
+  {id:71,cat:"sharara",name:"Pure Chiniya Silk Sharara - Complete Embroidery",price:14950,og:0,badge:"",img:CDN+"AKS02084.jpg?v=1776423074",fab:"Chiniya Silk",rating:4.9,desc:"Pure Chiniya silk sharara with complete hand embroidery and pure organza dupatta."},
+  {id:72,cat:"sharara",name:"Chanderi Silk Garara - Kardhana and Sequence",price:14500,og:0,badge:"",img:CDN+"AKS02049.jpg?v=1776420381",fab:"Chanderi Silk",rating:4.9,desc:"Chanderi silk kurta garara set with organza dupatta and pure hand embroidery."},
+  {id:73,cat:"sharara",name:"Mul Chanderi Sharara - Zardozi Organza Dupatta",price:14300,og:0,badge:"",img:CDN+"AKS02024.jpg?v=1776418375",fab:"Mul Chanderi",rating:4.9,desc:"Pure mul chanderi sharara with organza dupatta featuring intricate Zardozi handwork."}
+];
+
+// ===== APP STATE =====
+var page = "home";
+var cartItems = [];
+var wishItems = [];
+var filterCat = "all";
+var filterSort = "feat";
+var filterSearch = "";
+var filterMaxP = 30000;
+var detailId = null;
+var selSize = "M";
+var selQty = 1;
+var toastTimer = null;
+
+function rupee(n){ return "\u20B9" + n.toLocaleString("en-IN"); }
+function starStr(r){ var s=""; for(var i=0;i<Math.floor(r);i++) s+="\u2605"; return s; }
+function catLabel(id){ for(var i=0;i<CATS.length;i++) if(CATS[i].id===id) return CATS[i].l; return id; }
+function getProduct(id){ for(var i=0;i<PRODUCTS.length;i++) if(PRODUCTS[i].id===id) return PRODUCTS[i]; return null; }
+
+function showToast(msg){
+  var t = document.getElementById("T");
+  t.textContent = msg;
+  t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function(){ t.classList.remove("show"); }, 2400);
+}
+
+function addToCart(pid, sz, q){
+  var p = getProduct(pid);
+  if(!p) return;
+  var k = pid + "-" + sz;
+  var found = false;
+  for(var i=0;i<cartItems.length;i++){
+    if(cartItems[i].k === k){ cartItems[i].q += (q||1); found = true; break; }
+  }
+  if(!found) cartItems.push({k:k, p:p, sz:sz, q:q||1});
+  showToast("Added to bag!");
+  render();
+}
+
+function removeFromCart(k){
+  var next = [];
+  for(var i=0;i<cartItems.length;i++) if(cartItems[i].k !== k) next.push(cartItems[i]);
+  cartItems = next;
+  render();
+}
+
+function changeCartQty(k, delta){
+  for(var i=0;i<cartItems.length;i++){
+    if(cartItems[i].k === k){
+      cartItems[i].q += delta;
+      if(cartItems[i].q < 1) cartItems.splice(i,1);
+      break;
+    }
+  }
+  render();
+}
+
+function toggleWishlist(pid){
+  var idx = wishItems.indexOf(pid);
+  if(idx >= 0){ wishItems.splice(idx,1); showToast("Removed from wishlist"); }
+  else { wishItems.push(pid); showToast("Saved to wishlist!"); }
+  render();
+}
+
+function cartTotal(){ var t=0; for(var i=0;i<cartItems.length;i++) t+=cartItems[i].p.price*cartItems[i].q; return t; }
+function cartCount(){ var t=0; for(var i=0;i<cartItems.length;i++) t+=cartItems[i].q; return t; }
+function isWished(pid){ return wishItems.indexOf(pid)>=0; }
+
+function goPage(p, extra){
+  page = p;
+  if(extra){
+    if(extra.cat !== undefined) filterCat = extra.cat;
+    if(extra.id !== undefined){ detailId = extra.id; selSize="M"; selQty=1; }
+    if(extra.search !== undefined) filterSearch = extra.search;
+  }
+  render();
+  window.scrollTo(0,0);
+}
+
+// ===== PRODUCT CARD =====
+function buildCard(p){
+  var w = isWished(p.id);
+  var disc = p.og ? Math.round((1-p.price/p.og)*100) : 0;
+  var badge = p.badge==="sale" ? '<div class="pb"><span class="bsal">SALE '+disc+'%</span></div>'
+    : p.badge==="new" ? '<div class="pb"><span class="bnw">NEW</span></div>' : '<div class="pb"></div>';
+  return '<div class="pc" onclick="goPage(\'detail\',{id:'+p.id+'})">'
+    +'<div class="pci">'
+    +'<img src="'+p.img+'" alt="'+p.name+'" loading="lazy"/>'
+    +badge
+    +'<button class="pw'+(w?' on':'')+'" onclick="event.stopPropagation();toggleWishlist('+p.id+')">'+(w?'&#9829;':'&#9825;')+'</button>'
+    +'</div>'
+    +'<div class="pi">'
+    +'<div class="pcat">'+catLabel(p.cat)+'</div>'
+    +'<div class="strs">'+starStr(p.rating)+' <small style="color:var(--mt)">'+p.rating+'</small></div>'
+    +'<div class="pnm">'+p.name+'</div>'
+    +'<div class="pp"><span class="nw">'+rupee(p.price)+'</span>'+(p.og?'<span class="ws">'+rupee(p.og)+'</span>':'')+'</div>'
+    +'<button class="padd" onclick="event.stopPropagation();addToCart('+p.id+',\'M\',1)">ADD TO BAG</button>'
+    +'</div></div>';
+}
+
+// ===== HEADER =====
+function buildHeader(){
+  var cc = cartCount();
+  return '<div class="ann">GREAT SUMMER SALE - FLAT 40% OFF | CODE: SAVE40 | CALL 9828559969</div>'
+  +'<header><div class="hdr">'
+  +'<div class="logo-box" onclick="goPage(\'home\')">'+LOGOSVG+'</div>'
+  +'<nav>'
+  +'<a class="'+(page==="home"?"on":"")+'" onclick="goPage(\'home\')">HOME</a>'
+  +'<a class="'+(page==="shop"&&filterCat==="all"?"on":"")+'" onclick="goPage(\'shop\',{cat:\'all\'})">ALL</a>'
+  +'<a class="'+(filterCat==="saree"&&page==="shop"?"on":"")+'" onclick="goPage(\'shop\',{cat:\'saree\'})">SAREES</a>'
+  +'<a class="'+(filterCat==="suits"&&page==="shop"?"on":"")+'" onclick="goPage(\'shop\',{cat:\'suits\'})">SUITS</a>'
+  +'<a class="'+(filterCat==="anarkali"&&page==="shop"?"on":"")+'" onclick="goPage(\'shop\',{cat:\'anarkali\'})">ANARKALI</a>'
+  +'<a class="'+(filterCat==="cord-set"&&page==="shop"?"on":"")+'" onclick="goPage(\'shop\',{cat:\'cord-set\'})">CORD SETS</a>'
+  +'<a class="'+(filterCat==="kaftan"&&page==="shop"?"on":"")+'" onclick="goPage(\'shop\',{cat:\'kaftan\'})">KAFTAN</a>'
+  +'<a class="'+(filterCat==="lehenga"&&page==="shop"?"on":"")+'" onclick="goPage(\'shop\',{cat:\'lehenga\'})">LEHENGA</a>'
+  +'</nav>'
+  +'<div class="hdr-r">'
+  +'<div class="srch"><span class="si">&#128269;</span>'
+  +'<input placeholder="Search..." value="'+filterSearch+'" onkeyup="filterSearch=this.value;page=\'shop\';filterCat=\'all\';render()"/></div>'
+  +'<div class="icn" onclick="goPage(\'wish\')">&#9825; WISHLIST'+(wishItems.length?'<span class="dot">'+wishItems.length+'</span>':'')+'</div>'
+  +'<div class="icn" onclick="goPage(\'cart\')">BAG'+(cc?'<span class="dot">'+cc+'</span>':'')+'</div>'
+  +'</div>'
+  +'</div></header>';
+}
+
+// ===== HOME PAGE =====
+function buildHome(){
+  var newArr=[], saleArr=[];
+  for(var i=0;i<PRODUCTS.length;i++){
+    if(PRODUCTS[i].badge==="new" && newArr.length<8) newArr.push(PRODUCTS[i]);
+    if(PRODUCTS[i].badge==="sale") saleArr.push(PRODUCTS[i]);
+  }
+  var catCards = [
+    {cat:"saree",img:CDN+"Untitled_364_x_426_px_42.jpg?v=1765975675",em:"HERITAGE",h:"Sarees",tall:1},
+    {cat:"suits",img:CDN+"1000098085_a3a38330-5fac-4fbe-a6d4-246eee7b4476.jpg?v=1781285782",em:"REFINED",h:"Suits",tall:0},
+    {cat:"anarkali",img:CDN+"Lemon_Yellow_Mul_Chanderi_Anarkali_Suit_Set.jpg?v=1781795668",em:"REGAL",h:"Anarkali",tall:0},
+    {cat:"cord-set",img:CDN+"Petrol_Blue_Chanderi_Silk_Co-ord_Set.jpg?v=1781797292",em:"MODERN",h:"Cord Sets",tall:0},
+    {cat:"kaftan",img:CDN+"1000097475.jpg?v=1776418375",em:"FLOWING",h:"Kaftan",tall:0},
+    {cat:"lehenga",img:CDN+"TissueSaree_1.png?v=1765975675",em:"BRIDAL",h:"Lehenga",tall:0},
+    {cat:"sharara",img:CDN+"AKS03669.jpg?v=1765525220",em:"FESTIVE",h:"Sharara",tall:0}
+  ];
+  var cgH = "";
+  for(var i=0;i<catCards.length;i++){
+    var c=catCards[i];
+    cgH += '<div class="cc'+(c.tall?" tall":"")+'" onclick="goPage(\'shop\',{cat:\''+c.cat+'\'})">'
+      +'<img src="'+c.img+'" alt="'+c.h+'"/>'
+      +'<div class="cov"></div>'
+      +'<div class="cl"><em>'+c.em+'</em><h3>'+c.h+'</h3></div></div>';
+  }
+  var newH=""; for(var i=0;i<newArr.length;i++) newH+=buildCard(newArr[i]);
+  var saleH=""; for(var i=0;i<saleArr.length;i++) saleH+=buildCard(saleArr[i]);
+  return '<div class="hero">'
+    +'<img class="hbg" src="'+CDN+'Untitled_364_x_426_px_42.jpg?v=1765975675" alt="Hero"/>'
+    +'<div class="hov"></div>'
+    +'<div class="hc">'
+    +'<span class="eye">AMAHI FASHION &amp; DESIGNS - JAIPUR</span>'
+    +'<h1>Where Craft Becomes Couture</h1>'
+    +'<p>Handcrafted Indian luxury - pure fabrics, ancestral embroidery, and the timeless grace of Indian femininity.</p>'
+    +'<div class="hbs">'
+    +'<button class="bp" onclick="goPage(\'shop\',{cat:\'all\'})">SHOP COLLECTION</button>'
+    +'<button class="bo" onclick="goPage(\'shop\',{cat:\'saree\'})">EXPLORE SAREES</button>'
+    +'</div></div>'
+    +'<div class="hstag">'
+    +'<span class="ht">&#10038; PURE HANDWORK</span>'
+    +'<span class="ht">&#10038; COD AVAILABLE</span>'
+    +'<span class="ht">&#10038; PAN INDIA SHIPPING</span>'
+    +'<span class="ht">&#10038; EASY RETURNS</span>'
+    +'<span class="ht">&#10038; WHATSAPP ORDERS</span>'
+    +'</div></div>'
+    +'<div class="zari"><div class="zl"></div><div class="zm">&#9672;</div><div class="zl"></div></div>'
+    +'<div class="sec"><div class="sh"><span class="eye">EXPLORE BY CATEGORY</span><h2>Our Collections</h2><p>SEVEN CATEGORIES - ONE THREAD OF CRAFTSMANSHIP</p></div>'
+    +'<div class="cg">'+cgH+'</div></div>'
+    +'<div class="zari"><div class="zl"></div><div class="zm">&#9672;</div><div class="zl"></div></div>'
+    +'<div class="sec"><div class="sh"><span class="eye">JUST ARRIVED</span><h2>New Arrivals</h2><p>FRESH PIECES - TIMELESS CRAFT</p></div>'
+    +'<div class="pg">'+newH+'</div>'
+    +'<div style="text-align:center;margin-top:30px"><button class="bo" onclick="goPage(\'shop\',{cat:\'all\'})">VIEW ALL PRODUCTS</button></div></div>'
+    +(saleArr.length?'<div class="zari"><div class="zl"></div><div class="zm">&#9672;</div><div class="zl"></div></div>'
+    +'<div style="background:var(--bg2);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:50px 0">'
+    +'<div class="sec"><div class="sh"><span class="eye" style="color:var(--cr2)">LIMITED TIME</span><h2>Sale Collection</h2><p>SELECTED PIECES AT SPECIAL PRICES</p></div>'
+    +'<div class="pg">'+saleH+'</div></div></div>':'')
+    +'<div class="zari"><div class="zl"></div><div class="zm">&#9672;</div><div class="zl"></div></div>'
+    +'<div class="sec" style="padding-bottom:56px"><div class="ab">'
+    +'<div class="ab-im"><img src="'+CDN+'TissueSaree_1.png?v=1765975675" alt="About Amahi"/></div>'
+    +'<div><span class="eye">OUR STORY</span>'
+    +'<h2 style="font-size:36px;margin-bottom:14px;line-height:1.15">Style is a way to say who you are without having to speak</h2>'
+    +'<p style="color:var(--mt);font-size:14px;line-height:1.9;margin-bottom:16px">Founded in the heart of Jaipur\'s textile heritage, Amahi Fashion &amp; Designs celebrates the extraordinary skill of India\'s master craftsmen. Every piece is a testament to the artisans who keep these techniques alive.</p>'
+    +'<p style="color:var(--mt);font-size:14px;line-height:1.9;margin-bottom:28px">From the gossamer lightness of Mul Chanderi to the lustrous weight of pure silk organza - we source only the finest fabrics paired with Zardozi, Dabka, Marori, and thread embroidery traditions of Jaipur.</p>'
+    +'<button class="bp" onclick="goPage(\'shop\',{cat:\'all\'})">SHOP NOW</button></div></div></div>'
+    +'<div style="background:var(--cr);padding:15px 40px;text-align:center;font-size:11px;letter-spacing:1.5px;color:#fff">'
+    +'Call / WhatsApp: <strong>9828559969</strong> &nbsp;|&nbsp; amahifashions@gmail.com &nbsp;|&nbsp; Shop 1 &amp; 2, JK Wan Tower, Joshi Marg, Jaipur 302012</div>';
+}
+
+// ===== SHOP PAGE =====
+function buildShop(){
+  var pr = [];
+  for(var i=0;i<PRODUCTS.length;i++){
+    var p=PRODUCTS[i];
+    if(filterCat!=="all" && p.cat!==filterCat) continue;
+    if(filterSearch && (p.name+p.fab).toLowerCase().indexOf(filterSearch.toLowerCase())<0) continue;
+    if(p.price>filterMaxP) continue;
+    pr.push(p);
+  }
+  if(filterSort==="low") pr.sort(function(a,b){return a.price-b.price;});
+  else if(filterSort==="high") pr.sort(function(a,b){return b.price-a.price;});
+  else if(filterSort==="star") pr.sort(function(a,b){return b.rating-a.rating;});
+
+  var bi = filterCat!=="all" && BIMG[filterCat];
+  var topH = bi
+    ? '<div class="cban"><img src="'+bi+'" alt="'+catLabel(filterCat)+'"/>'
+      +'<div class="cbt"><span class="eye">'+filterCat.toUpperCase()+' COLLECTION</span>'
+      +'<h1>'+catLabel(filterCat)+'</h1></div></div>'
+    : '<div class="pt"><h1>All Collections</h1><p>'+PRODUCTS.length+' HANDCRAFTED PIECES</p></div>';
+
+  var filterH = "";
+  for(var i=0;i<CATS.length;i++){
+    var c=CATS[i];
+    var cnt=0;
+    if(c.id==="all") cnt=PRODUCTS.length;
+    else for(var j=0;j<PRODUCTS.length;j++) if(PRODUCTS[j].cat===c.id) cnt++;
+    filterH += '<button class="fo'+(filterCat===c.id?' on':'')+'" onclick="filterCat=\''+c.id+'\';render()">'
+      +'<span>'+c.l+'</span><span style="font-size:10px;color:var(--bd)">'+cnt+'</span></button>';
+  }
+
+  var cardsH = "";
+  for(var i=0;i<pr.length;i++) cardsH+=buildCard(pr[i]);
+
+  return topH
+    +'<div class="sec" style="padding-top:28px;padding-bottom:56px"><div class="shoplay">'
+    +'<div class="flt">'
+    +'<div class="fg"><div class="fh">CATEGORY</div>'+filterH+'</div>'
+    +'<div class="fg"><div class="fh">PRICE</div>'
+    +'<input type="range" min="4000" max="30000" step="500" value="'+filterMaxP+'" oninput="filterMaxP=+this.value;render()" style="width:100%;accent-color:var(--cr)"/>'
+    +'<p style="font-size:12px;color:var(--mt);margin-top:5px">Up to '+rupee(filterMaxP)+'</p></div>'
+    +'<div class="fg"><div class="fh">FABRIC</div>'
+    +'<button class="fo" onclick="filterSearch=\'Chanderi\';filterCat=\'all\';render()">Chanderi</button>'
+    +'<button class="fo" onclick="filterSearch=\'Organza\';filterCat=\'all\';render()">Organza</button>'
+    +'<button class="fo" onclick="filterSearch=\'Silk\';filterCat=\'all\';render()">Silk</button>'
+    +'<button class="fo" onclick="filterSearch=\'Satin\';filterCat=\'all\';render()">Satin</button>'
+    +'<button class="fo" onclick="filterSearch=\'Tissue\';filterCat=\'all\';render()">Tissue</button>'
+    +'</div>'
+    +(filterSearch||filterMaxP<30000?'<button class="bo" style="width:100%;padding:8px;font-size:9px;letter-spacing:2px;margin-top:6px" onclick="filterSearch=\'\';filterMaxP=30000;filterCat=\'all\';render()">CLEAR FILTERS</button>':'')
+    +'</div>'
+    +'<div>'
+    +'<div class="sbar"><p>'+pr.length+' pieces found</p>'
+    +'<select onchange="filterSort=this.value;render()">'
+    +'<option value="feat">Featured</option>'
+    +'<option value="low">Price: Low to High</option>'
+    +'<option value="high">Price: High to Low</option>'
+    +'<option value="star">Best Rated</option>'
+    +'</select></div>'
+    +(cardsH?'<div class="pg">'+cardsH+'</div>'
+      :'<div class="es"><h2>No pieces found</h2><p>Try adjusting filters</p>'
+      +'<button class="bp" style="margin-top:16px" onclick="filterSearch=\'\';filterMaxP=30000;filterCat=\'all\';render()">RESET</button></div>')
+    +'</div></div></div>';
+}
+
+// ===== DETAIL PAGE =====
+function buildDetail(){
+  var p = getProduct(detailId);
+  if(!p) return '<div class="es"><h2>Product not found</h2></div>';
+  var w = isWished(p.id);
+  var disc = p.og ? Math.round((1-p.price/p.og)*100) : 0;
+  var sizes = ["XS","S","M","L","XL","XXL"];
+  var szH = "";
+  for(var i=0;i<sizes.length;i++){
+    szH += '<button class="sb'+(selSize===sizes[i]?' on':'')+'" onclick="selSize=\''+sizes[i]+'\';render()">'+sizes[i]+'</button>';
+  }
+  var rel=[], rc=0;
+  for(var i=0;i<PRODUCTS.length;i++) if(PRODUCTS[i].cat===p.cat && PRODUCTS[i].id!==p.id && rc<4){rel.push(PRODUCTS[i]);rc++;}
+  var relH=""; for(var i=0;i<rel.length;i++) relH+=buildCard(rel[i]);
+  return '<button class="bkb" onclick="goPage(\'shop\',{cat:\''+p.cat+'\'})">&#8592; BACK TO '+catLabel(p.cat).toUpperCase()+'</button>'
+    +'<div class="sec" style="padding-top:40px;padding-bottom:56px"><div class="dlay">'
+    +'<div class="dimg"><img src="'+p.img+'" alt="'+p.name+'"/></div>'
+    +'<div class="di"><span class="eye">'+catLabel(p.cat).toUpperCase()+'</span>'
+    +'<h1>'+p.name+'</h1>'
+    +'<div class="strs" style="font-size:14px;margin-bottom:9px">'+starStr(p.rating)+' <small style="color:var(--mt)">'+p.rating+'/5</small></div>'
+    +'<div class="dpr"><span class="nw">'+rupee(p.price)+'</span>'+(p.og?'<span class="ws">'+rupee(p.og)+'</span><span class="dbg">SAVE '+disc+'%</span>':'')+'</div>'
+    +'<hr class="dvd"/>'
+    +'<p style="font-size:14px;color:var(--mt);line-height:1.9">'+p.desc+'</p>'
+    +'<hr class="dvd"/>'
+    +'<p style="font-size:9px;letter-spacing:2px;color:var(--mt);margin-bottom:9px">SIZE &nbsp;<strong style="color:var(--gd)">'+selSize+'</strong></p>'
+    +'<div class="szs">'+szH+'</div>'
+    +'<div class="qwrap">'
+    +'<button class="qb" onclick="if(selQty>1){selQty--;render()}">&#8722;</button>'
+    +'<span class="qn">'+selQty+'</span>'
+    +'<button class="qb" onclick="selQty++;render()">+</button>'
+    +'</div>'
+    +'<button class="acb" onclick="addToCart('+p.id+',selSize,selQty)">ADD TO BAG</button>'
+    +'<button class="wb'+(w?' on':'')+'" onclick="toggleWishlist('+p.id+')">'+(w?'&#9829; SAVED TO WISHLIST':'&#9825; SAVE TO WISHLIST')+'</button>'
+    +'<div style="margin-top:18px;font-size:12px;color:var(--mt);line-height:1.9">'
+    +'<p>&#10038; <span style="color:var(--iv)">Fabric:</span> '+p.fab+'</p>'
+    +'<p>&#10038; <span style="color:var(--iv)">Care:</span> Dry Clean Only</p>'
+    +'<p>&#10038; <span style="color:var(--iv)">Shipping:</span> PAN India, 15-18 Working Days</p>'
+    +'<p>&#10038; <span style="color:var(--iv)">Returns:</span> 7-Day Easy Return</p>'
+    +'<p><a href="https://wa.me/919828559969" target="_blank" style="color:var(--cr2)">Order on WhatsApp &#8599;</a></p>'
+    +'</div></div></div>'
+    +(relH?'<div class="zari"><div class="zl"></div><div class="zm">&#9672;</div><div class="zl"></div></div>'
+    +'<div class="sh"><span class="eye">YOU MAY ALSO LOVE</span><h2>Related Pieces</h2></div>'
+    +'<div class="pg">'+relH+'</div>':'')
+    +'</div>';
+}
+
+// ===== CART PAGE =====
+function buildCart(){
+  if(!cartItems.length){
+    return '<div class="cp"><h1 style="font-size:34px;letter-spacing:2px;margin-bottom:24px">Your Bag</h1>'
+      +'<div class="es"><h2>Your bag is empty</h2><p>Discover our handcrafted collection</p>'
+      +'<button class="bp" style="margin-top:16px" onclick="goPage(\'shop\',{cat:\'all\'})">SHOP NOW</button></div></div>';
+  }
+  var sub=cartTotal(), disc=Math.round(sub*.05), ship=sub>=2000?0:199, tot=sub-disc+ship;
+  var itemsH = "";
+  for(var i=0;i<cartItems.length;i++){
+    var it=cartItems[i];
+    itemsH += '<div class="ci">'
+      +'<div style="height:112px;overflow:hidden;background:var(--card)"><img src="'+it.p.img+'" alt="'+it.p.name+'" style="width:100%;height:100%;object-fit:cover"/></div>'
+      +'<div>'
+      +'<div style="font-size:9px;letter-spacing:2px;color:var(--cr2);margin-bottom:3px">'+catLabel(it.p.cat).toUpperCase()+'</div>'
+      +'<div style="font-family:\'Cormorant Garamond\',serif;font-size:15px;margin-bottom:5px">'+it.p.name+'</div>'
+      +'<div style="font-size:11px;color:var(--mt)">SIZE: '+it.sz+'</div>'
+      +'<div class="qwrap" style="margin-top:8px">'
+      +'<button class="qb" onclick="changeCartQty(\''+it.k+'\',-1)">&#8722;</button>'
+      +'<span class="qn">'+it.q+'</span>'
+      +'<button class="qb" onclick="changeCartQty(\''+it.k+'\',1)">+</button>'
+      +'</div></div>'
+      +'<div style="text-align:right">'
+      +'<div style="color:var(--gd);font-size:15px;margin-bottom:8px">'+rupee(it.p.price*it.q)+'</div>'
+      +'<button onclick="removeFromCart(\''+it.k+'\')" style="font-size:9px;letter-spacing:1.5px;color:var(--mt);cursor:pointer;border:none;background:none;font-family:Inter,sans-serif">REMOVE</button>'
+      +'</div></div>';
+  }
+  return '<div class="cp"><h1 style="font-size:34px;letter-spacing:2px;margin-bottom:24px">Your Bag <span style="font-size:14px;color:var(--mt)">('+cartCount()+' items)</span></h1>'
+    +'<div style="display:grid;grid-template-columns:1fr 310px;gap:24px;align-items:start">'
+    +'<div class="ci-wrap">'+itemsH+'</div>'
+    +'<div><div class="ctb">'
+    +'<h3 style="font-size:18px;letter-spacing:1px;margin-bottom:15px">Order Summary</h3>'
+    +'<div class="ctr"><span>Subtotal</span><span>'+rupee(sub)+'</span></div>'
+    +'<div class="ctr"><span>Loyalty Discount (5%)</span><span style="color:#6CB97A">-'+rupee(disc)+'</span></div>'
+    +'<div class="ctr"><span>Shipping</span><span>'+(ship?rupee(ship):"Free")+'</span></div>'
+    +'<div class="ctr big"><span>Total</span><span style="color:var(--gd)">'+rupee(tot)+'</span></div>'
+    +'<button class="bp" style="width:100%;margin-top:14px;padding:13px;font-size:10px;letter-spacing:3px" onclick="goPage(\'checkout\')">PROCEED TO CHECKOUT</button>'
+    +'<p style="text-align:center;margin-top:9px;font-size:11px;color:var(--mt)">UPI | Cards | NetBanking | COD</p>'
+    +'</div>'
+    +'<div style="margin-top:10px;padding:13px;border:1px solid var(--bd)">'
+    +'<p style="font-size:9px;color:var(--mt);margin-bottom:8px">Promo code</p>'
+    +'<div style="display:flex;gap:7px">'
+    +'<input id="promoInput" placeholder="Enter code" style="flex:1;background:var(--bg2);border:1px solid var(--bd);color:var(--iv);padding:8px 10px;font-size:12px;outline:none;font-family:Inter,sans-serif"/>'
+    +'<button class="bp" style="padding:8px 12px;font-size:9px;letter-spacing:1px" onclick="var v=document.getElementById(\'promoInput\').value.toUpperCase();showToast(v===\'SAVE40\'?\'40% discount applied!\':\' Invalid code\')">APPLY</button>'
+    +'</div></div></div></div></div>';
+}
+
+// ===== CHECKOUT PAGE =====
+function buildCheckout(){
+  var sub=cartTotal(), disc=Math.round(sub*.05), ship=sub>=2000?0:199, tot=sub-disc+ship;
+  var oItems="";
+  for(var i=0;i<cartItems.length;i++){
+    var it=cartItems[i];
+    oItems += '<div style="display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--bd)">'
+      +'<div style="width:54px;height:68px;flex-shrink:0;overflow:hidden"><img src="'+it.p.img+'" style="width:100%;height:100%;object-fit:cover"/></div>'
+      +'<div><p style="font-size:12px;line-height:1.4;margin-bottom:3px">'+it.p.name+'</p>'
+      +'<p style="font-size:10px;color:var(--mt)">'+it.sz+' x'+it.q+'</p>'
+      +'<p style="color:var(--gd);margin-top:4px">'+rupee(it.p.price*it.q)+'</p></div></div>';
+  }
+  return '<div class="pt"><span class="eye">SECURE CHECKOUT</span><h1>Complete Your Order</h1></div>'
+    +'<div class="chklay">'
+    +'<div>'
+    +'<h3 style="font-family:\'Cormorant Garamond\',serif;font-size:20px;margin-bottom:18px">Shipping Details</h3>'
+    +'<div class="fr2">'
+    +'<div class="ff"><label>FIRST NAME</label><input placeholder="Priya"/></div>'
+    +'<div class="ff"><label>LAST NAME</label><input placeholder="Sharma"/></div>'
+    +'</div>'
+    +'<div class="ff"><label>EMAIL</label><input type="email" placeholder="priya@email.com"/></div>'
+    +'<div class="ff"><label>PHONE</label><input type="tel" placeholder="+91 98XXX XXXXX"/></div>'
+    +'<div class="ff"><label>ADDRESS</label><input placeholder="Flat / House No., Building"/></div>'
+    +'<div class="ff"><label>AREA / LANDMARK</label><input placeholder="Area, Landmark (optional)"/></div>'
+    +'<div class="fr2">'
+    +'<div class="ff"><label>CITY</label><input placeholder="Jaipur"/></div>'
+    +'<div class="ff"><label>PIN CODE</label><input placeholder="302012"/></div>'
+    +'</div>'
+    +'<div class="fr2">'
+    +'<div class="ff"><label>STATE</label><select><option>Rajasthan</option><option>Delhi</option><option>Maharashtra</option><option>Uttar Pradesh</option><option>Karnataka</option><option>Gujarat</option></select></div>'
+    +'<div class="ff"><label>COUNTRY</label><select><option>India</option></select></div>'
+    +'</div>'
+    +'<h3 style="font-family:\'Cormorant Garamond\',serif;font-size:20px;margin:22px 0 16px">Payment Method</h3>'
+    +'<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:18px">'
+    +'<label style="display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--bd);cursor:pointer;font-size:13px"><input type="radio" name="pay" checked style="accent-color:var(--cr)"/>UPI / PhonePe / GPay / Paytm</label>'
+    +'<label style="display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--bd);cursor:pointer;font-size:13px"><input type="radio" name="pay" style="accent-color:var(--cr)"/>Credit / Debit Card</label>'
+    +'<label style="display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--bd);cursor:pointer;font-size:13px"><input type="radio" name="pay" style="accent-color:var(--cr)"/>Net Banking</label>'
+    +'<label style="display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--bd);cursor:pointer;font-size:13px"><input type="radio" name="pay" style="accent-color:var(--cr)"/>Cash on Delivery (COD)</label>'
+    +'</div>'
+    +'<button class="bp" style="width:100%;padding:15px;font-size:10px;letter-spacing:3px" onclick="showToast(\'Order placed! Confirmation coming shortly.\');cartItems=[];goPage(\'home\')">PLACE ORDER - '+rupee(tot)+'</button>'
+    +'</div>'
+    +'<div class="osb">'
+    +'<h3 style="font-family:\'Cormorant Garamond\',serif;font-size:19px;margin-bottom:14px">Your Order</h3>'
+    +oItems
+    +'<div style="margin-top:14px">'
+    +'<div class="ctr" style="font-size:12px"><span>Subtotal</span><span>'+rupee(sub)+'</span></div>'
+    +'<div class="ctr" style="font-size:12px"><span>Discount</span><span style="color:#6CB97A">-'+rupee(disc)+'</span></div>'
+    +'<div class="ctr" style="font-size:12px"><span>Shipping</span><span>'+(ship?rupee(ship):"Free")+'</span></div>'
+    +'<div style="border-top:1px solid var(--bd);padding-top:11px;margin-top:11px;display:flex;justify-content:space-between">'
+    +'<span style="font-size:14px;font-family:\'Cormorant Garamond\',serif">Total</span>'
+    +'<span style="color:var(--gd);font-size:17px">'+rupee(tot)+'</span>'
+    +'</div></div></div></div>';
+}
+
+// ===== WISHLIST =====
+function buildWishlist(){
+  var items=[];
+  for(var i=0;i<PRODUCTS.length;i++) if(isWished(PRODUCTS[i].id)) items.push(PRODUCTS[i]);
+  var cardsH=""; for(var i=0;i<items.length;i++) cardsH+=buildCard(items[i]);
+  return '<div class="wishlay">'
+    +'<h1 style="font-size:38px;letter-spacing:2px;margin-bottom:6px">Wishlist</h1>'
+    +'<p style="color:var(--mt);font-size:10px;letter-spacing:2px;margin-bottom:34px">'+items.length+' SAVED PIECE'+(items.length!==1?'S':'')+'</p>'
+    +(cardsH?'<div class="pg">'+cardsH+'</div>'
+      :'<div class="es"><h2>Your wishlist is empty</h2><p>Tap the heart on any piece to save it</p>'
+      +'<button class="bp" style="margin-top:16px" onclick="goPage(\'shop\',{cat:\'all\'})">EXPLORE</button></div>')
+    +'</div>';
+}
+
+// ===== FOOTER =====
+function buildFooter(){
+  var cats = "";
+  for(var i=0;i<CATS.length;i++){
+    if(CATS[i].id!=="all") cats+='<a onclick="goPage(\'shop\',{cat:\''+CATS[i].id+'\'})">'+CATS[i].l+'</a>';
+  }
+  return '<footer>'
+    +'<div class="fi">'
+    +'<div>'
+    +'<div class="flb">'+LOGOSVG+'</div>'
+    +'<p style="font-size:13px;color:var(--mt);max-width:220px;line-height:1.75;margin-top:10px">Style is a way to say who you are without having to speak.<br/><br/>Shop 1 &amp; 2, Ground Floor, 21A JK Wan Tower, Joshi Marg, Jaipur, Rajasthan - 302012</p>'
+    +'<div style="display:flex;gap:12px;margin-top:13px">'
+    +'<a href="https://www.facebook.com/amahifashion/" target="_blank" style="font-size:10px;letter-spacing:1.5px;color:var(--mt)">FACEBOOK</a>'
+    +'<a href="https://www.instagram.com/amahibyminakshi/" target="_blank" style="font-size:10px;letter-spacing:1.5px;color:var(--mt)">INSTAGRAM</a>'
+    +'<a href="https://www.youtube.com/@amahifashion3235" target="_blank" style="font-size:10px;letter-spacing:1.5px;color:var(--mt)">YOUTUBE</a>'
+    +'</div></div>'
+    +'<div class="fc"><h4>COLLECTIONS</h4>'+cats+'</div>'
+    +'<div class="fc"><h4>INFORMATION</h4>'
+    +'<a href="https://amahifashion.com/pages/about-new" target="_blank">About Us</a>'
+    +'<a href="https://amahifashion.com/blogs/news" target="_blank">Blog</a>'
+    +'<a href="https://amahifashion.com/pages/contact-1" target="_blank">Contact Us</a>'
+    +'<a href="https://amahifashion.com/pages/privacy1" target="_blank">Privacy Policy</a>'
+    +'</div>'
+    +'<div class="fc"><h4>SUPPORT</h4>'
+    +'<a href="https://amahifashion.com/pages/return-policy" target="_blank">Return Policy</a>'
+    +'<a href="https://amahifashion.com/pages/shipping-delivery-policy" target="_blank">Shipping Policy</a>'
+    +'<a href="tel:9828559969">&#128222; 9828559969</a>'
+    +'<a href="mailto:amahifashions@gmail.com">&#9993; amahifashions@gmail.com</a>'
+    +'<a href="https://wa.me/919828559969" target="_blank">&#128172; WhatsApp Order</a>'
+    +'</div></div>'
+    +'<div class="fbot"><span>&#169; 2026 AMAHI FASHION &amp; DESIGNS - ALL RIGHTS RESERVED</span><span>UPI &middot; Cards &middot; Net Banking &middot; COD</span></div>'
+    +'</footer>';
+}
+
+// ===== MAIN RENDER =====
+function render(){
+  try {
+    var body = "";
+    if(page==="detail") body = buildDetail();
+    else if(page==="shop") body = buildShop();
+    else if(page==="cart") body = buildCart();
+    else if(page==="checkout") body = buildCheckout();
+    else if(page==="wish") body = buildWishlist();
+    else body = buildHome();
+    document.getElementById("app").innerHTML = buildHeader() + "<main>" + body + "</main>" + buildFooter();
+  } catch(e) {
+    document.getElementById("app").innerHTML = '<div style="color:#C42840;padding:30px;font-family:monospace">ERROR: '+e.message+'<br/>'+e.stack+'</div>';
+  }
+}
+
+render();
+</script>
+</body>
+</html>
